@@ -1,0 +1,10 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Doctor's appointment",
+      "day": "31 August 2021"
+    },
+    { "id": 2, "text": "Workout", "day": "1 September 2021" }
+  ]
+}

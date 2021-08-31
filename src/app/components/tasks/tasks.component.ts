@@ -1,26 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { ITask } from 'src/app/interfaces/ITask';
+import { TaskService } from 'src/app/services/task.service';
 
-export interface ITask {
-  id: number;
-  text: string;
-}
-
-const TASKS: ITask[] = [
-  {
-    id: 1,
-    text: "Doctor's appointment",
-  },
-  { id: 2, text: 'Workout' },
-];
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.scss'],
 })
 export class TasksComponent implements OnInit {
-  tasks: ITask[] = TASKS;
+  tasks: ITask[];
 
-  constructor() {}
+  constructor(private taskService: TaskService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.taskService.getTasks().subscribe(
+      (res) => (this.tasks = res),
+      (error) => console.log(error)
+    );
+  }
 }
