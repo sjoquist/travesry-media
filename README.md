@@ -1,6 +1,6 @@
 # TravesryMedia
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
+Följer tutorial https://www.youtube.com/watch?v=3dHNOWTI7H8
 
 ## Development server
 
